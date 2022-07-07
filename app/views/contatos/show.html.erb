@@ -1,0 +1,9 @@
+<h1><%= @contato.nome %></h1>
+
+<p>Telefone: <%= @contato.telefone %></p>
+
+<%# O link_to recebe por padrão dois parâmetros: o texto para
+    o link e o destino. Neste caso, o destino é a action index
+    do próprio controller.
+%>
+<p><%= link_to "Voltar à lista", :action => :index %></p>

@@ -1,0 +1,24 @@
+<h1>disciplinas</h1>
+
+<%# O link_to recebe por padrão dois parâmetros: o texto para
+    o link e o destino. Neste caso, o destino é a action new
+    do próprio controller.
+%>
+<p><%= link_to "Nova disciplina", :action => :new %>
+
+<ul>
+    <% @disciplinas.each do |disciplina| %>
+        <li>
+            <%# Aqui temos vários link_to para os links de abrir, editar
+                e excluir o disciplina. %>
+            <%= link_to disciplina.nome, disciplina %>: <%= disciplina.ementa %>
+            [<%= link_to "Alterar", edit_disciplina_path(disciplina) %>]
+            [<%= link_to "Excluir",
+                disciplina_path(disciplina),
+                data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Tem certeza?"
+                } %>]
+        </li>
+    <% end %>
+</ul>

@@ -1,0 +1,24 @@
+<h1>Contatos</h1>
+
+<%# O link_to recebe por padrão dois parâmetros: o texto para
+    o link e o destino. Neste caso, o destino é a action new
+    do próprio controller.
+%>
+<p><%= link_to "Novo Contato", :action => :new %>
+
+<ul>
+    <% @contatos.each do |contato| %>
+        <li>
+            <%# Aqui temos vários link_to para os links de abrir, editar
+                e excluir o contato. %>
+            <%= link_to contato.nome, contato %>: <%= contato.telefone %>
+            [<%= link_to "Alterar", edit_contato_path(contato) %>]
+            [<%= link_to "Excluir",
+                contato_path(contato),
+                data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Tem certeza?"
+                } %>]
+        </li>
+    <% end %>
+</ul>

@@ -1,0 +1,24 @@
+<h1>Professor</h1>
+
+<%# O link_to recebe por padrão dois parâmetros: o texto para
+    o link e o destino. Neste caso, o destino é a action new
+    do próprio controller.
+%>
+<p><%= link_to "Novo Professor", :action => :new %>
+
+<ul>
+    <% @professores.each do |professor| %>
+        <li>
+            <%# Aqui temos vários link_to para os links de abrir, editar
+                e excluir o aluno. %>
+            <%= link_to professor.nome, aluno %>: <%= professor.email %>
+            [<%= link_to "Alterar", edit_professor_path(professor) %>]
+            [<%= link_to "Excluir",
+                professor_path(professor),
+                data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Tem certeza?"
+                } %>]
+        </li>
+    <% end %>
+</ul>

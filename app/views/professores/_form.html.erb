@@ -1,0 +1,35 @@
+<%# Esta é uma partial para o formulário de cadastro e edição de
+    um contato.
+    No Rails, partials são templates que podem ser carregados dentro
+    de outros templates. Neste caso, estamos usando essa partial para
+    não ter que repetir o código do formulário no template de novo
+    contato e de editar contato.
+%>
+
+
+
+
+
+<%# Este form builder constroi um form com os dados do model %>
+<%= form_with model: professor do |form| %>
+    <div style>
+        <%= form.label :nome %><br>
+        <%= form.text_field :nome %>
+        <%# Mensagem de erro embutida do Rails %>
+        <% professor.errors.full_messages_for(:nome).each do |msg| %>
+            <div><%= msg %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.label :email %><br>
+        <%= form.text_field :email %><br>
+        <% professor.errors.full_messages_for(:email).each do |msg| %>
+            <div><%= msg %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>
