@@ -1,15 +1,101 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+
+body {
+  background: linear-gradient(45deg, #1c1031, #3F5EFB);
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  position: center;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+}
+
+h1 {
+    color:rgb(252, 255, 208)
+}
+
+label {
+    color: wheat;
+    font-size: 16px;
+}
+
+a {
+    font-size: 16px;
+    color: rgb(246, 250, 0);
+    text-decoration: none;
+  
+}
+
+p{
+    font-size: 20px;
+    color: wheat;
+    text-decoration: none;
+}
+
+li {
+    color: #ebedfc;
+}
+
+input[type=text]{
+    background-color: #bdc8ff;
+    border-radius: 3px;
+    text-decoration: solid;
+}
+
+
+input[type=submit] {
+    padding:5px 15px;
+    color: black;
+    margin-top: 18px;
+    background:rgb(141, 241, 220); 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+ul {
+  background: linear-gradient(45deg, #04010e, #1f043d);
+  padding: 3em;
+  height: 320px;
+  width: 200px;
+  border-radius: 20px;
+  border-left: 1px solid $white;
+  border-top: 1px solid $white;
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out
+}
+
+form {
+  position: center;
+  background: linear-gradient(45deg, #04010e, #1f043d);
+  padding: 3em;
+  height: 120px;
+  width: 200px;
+  border-radius: 20px;
+  border-left: 1px solid $white;
+  border-top: 1px solid $white;
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out
+
+ 
+  
+    }
+  
+
+
+
+
