@@ -26,7 +26,7 @@ class ProfessoresController < ApplicationController
     end
 
     def create
-        @professor = Professor.new(nome: params[:contato][:nome], telefone: params[:contato][:telefone])
+        @professor = Professor.new(nome: params[:professor][:nome], email: params[:professor][:email])
 
         if @professor.save
             redirect_to @professor
